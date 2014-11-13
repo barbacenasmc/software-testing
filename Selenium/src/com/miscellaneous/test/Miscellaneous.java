@@ -1,5 +1,7 @@
 package com.miscellaneous.test;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebDriver;
 
@@ -14,6 +16,7 @@ public class Miscellaneous {
 		driver = new FirefoxDriver();
 		//driver.manage().window().maximize();
 		driver.get(baseURL);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
 	/*public void setBrowser(String browser){

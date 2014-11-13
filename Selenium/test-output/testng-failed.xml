@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.crowdtogo.test.apply.CrowdieApplication">
+      <class name="com.crowdtogo.test.apply.CrowdieApplicationStep2">
         <methods>
-          <include name="testApplyNoLname"/>
-          <include name="testApply100LnameChar"/>
+          <include name="testStep2Valid"/>
+          <include name="initialize"/>
+          <include name="testStep2Valid2"/>
         </methods>
-      </class> <!-- com.crowdtogo.test.apply.CrowdieApplication -->
+      </class> <!-- com.crowdtogo.test.apply.CrowdieApplicationStep2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

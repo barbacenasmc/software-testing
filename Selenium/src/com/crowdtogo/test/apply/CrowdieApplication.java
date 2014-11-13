@@ -8,6 +8,7 @@ public class CrowdieApplication {
 
 	public Miscellaneous misc1 = new Miscellaneous();
 	
+	@BeforeTest
 	public void initialize(){
 		misc1.setURL("http://devapp.crowdtogo.com/crowdie/step1");		
 	}
@@ -37,14 +38,14 @@ public class CrowdieApplication {
 	
 	//@Test(priority = 0)
 	public void testApply() throws Exception{
-		initialize();
+		//initialize();
 		inputApply("jdelacruz@gmail.com", "jdelacruz000", "jdelacruz000","Juan", "Dela Cruz", "01/01/1990", "09261234567");
 		if(misc1.driver.getTitle().equals("Well paid part time jobs")){
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}else{
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 		}
-		endTest();
+		//endTest();
 	}
 	//@Test(priority = 1)
 	public void testApplyOtherValidEmail() throws Exception{
@@ -52,7 +53,7 @@ public class CrowdieApplication {
 				"disposable.style.email.with+symbol@example.com", "other.email-with-dash@example.com", "user@localserver.com", "another_acceptable_example@server.com"};
 		
 		for(int i=0;i<validEmails.length;i++){
-			initialize();
+			//initialize();
 			inputApply(validEmails[i], "jdelacruz000", "jdelacruz000","Juan", "Dela Cruz", "01/01/1990", "09261234567");
 			if(misc1.driver.getTitle().equals("Well paid part time jobs")){
 				System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName()+ ":"+ validEmails[i]+ " Passed!");
@@ -276,7 +277,7 @@ public class CrowdieApplication {
 		endTest();
 	}
 	
-	@Test(priority = 19)
+	//@Test(priority = 19)
 	public void testApplyNoLname() throws Exception{
 		//User did not enter a value on the last name field
 		initialize();
