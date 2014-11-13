@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="67334" started-at="2014-11-13T06:45:31Z" finished-at="2014-11-13T06:46:39Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="67334" started-at="2014-11-13T06:45:31Z" finished-at="2014-11-13T06:46:39Z">
+      <class name="com.crowdtogo.test.apply.CrowdieApplication">
+        <test-method status="PASS" signature="testApplyNoLname()[pri:0, instance:com.crowdtogo.test.apply.CrowdieApplication@39e53a48]" name="testApplyNoLname" duration-ms="67327" started-at="2014-11-13T14:45:31Z" finished-at="2014-11-13T14:46:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApplyNoLname -->
+      </class> <!-- com.crowdtogo.test.apply.CrowdieApplication -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

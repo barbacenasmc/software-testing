@@ -1,0 +1,15 @@
+package com.example.tests;
+
+import com.thoughtworks.selenium.*;
+import org.testng.annotations.*;
+import static org.testng.Assert.*;
+import java.util.regex.Pattern;
+
+public class logoutAdmin extends SeleneseTestNgHelper {
+	@Test public void testLogoutAdmin() throws Exception {
+		selenium.open("/orders/loadAddOrderPage");
+		selenium.click("link=Super User");
+		selenium.click("link=Log Out");
+		selenium.waitForPageToLoad("30000");
+	}
+}
