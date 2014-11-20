@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.crowdtogo.test.apply.CrowdieApplicationStep2">
+      <class name="com.ehatidapi.test.login.WebLogin">
         <methods>
-          <include name="testStep2Valid"/>
-          <include name="initialize"/>
-          <include name="testStep2Valid2"/>
+          <include name="testValidLogin"/>
         </methods>
-      </class> <!-- com.crowdtogo.test.apply.CrowdieApplicationStep2 -->
+      </class> <!-- com.ehatidapi.test.login.WebLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

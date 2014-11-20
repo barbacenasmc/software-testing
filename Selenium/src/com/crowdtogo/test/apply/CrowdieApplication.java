@@ -36,7 +36,7 @@ public class CrowdieApplication {
 		misc1.endSession();
 	}
 	
-	//@Test(priority = 0)
+	@Test(priority = 0)
 	public void testApply() throws Exception{
 		//initialize();
 		inputApply("jdelacruz@gmail.com", "jdelacruz000", "jdelacruz000","Juan", "Dela Cruz", "01/01/1990", "09261234567");

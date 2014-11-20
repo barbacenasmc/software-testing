@@ -22,7 +22,7 @@ public class testLogin {
 	public static final int LENGTH=5; // the length of passwords we want to generate
 	public static String passWordGen(String currentPass,char c){      
 	    if(c<='~'){
-	       // System.out.println(currentPass+c);
+	    	System.out.println(currentPass+c);
 	        passWordGen(currentPass,(char)(c+1)); //go through every character at this position
 	        
 	        if(currentPass.length()<LENGTH-1){
