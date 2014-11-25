@@ -6,8 +6,14 @@
       <class name="com.skosay.test.register.ConsumerRegister">
         <methods>
           <include name="testApplyMismatchedPassword"/>
+          <include name="testApplyNoValueOnConfirm"/>
+          <include name="testApplyOtherValidEmail"/>
+          <include name="testApplyNoValueOnPassword"/>
+          <include name="testApplyInvalidEmails"/>
           <include name="tearDown"/>
+          <include name="testApplyShortPassword"/>
           <include name="setUp"/>
+          <include name="testApplyNoValueOnPasswordAndConfirm"/>
         </methods>
       </class> <!-- com.skosay.test.register.ConsumerRegister -->
     </classes>

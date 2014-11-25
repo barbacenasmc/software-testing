@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22782" started-at="2014-11-25T06:46:25Z" finished-at="2014-11-25T06:46:48Z">
+  <suite name="Default suite" duration-ms="83226" started-at="2014-11-25T06:58:13Z" finished-at="2014-11-25T06:59:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22782" started-at="2014-11-25T06:46:25Z" finished-at="2014-11-25T06:46:48Z">
+    <test name="Default test" duration-ms="83226" started-at="2014-11-25T06:58:13Z" finished-at="2014-11-25T06:59:36Z">
       <class name="com.skosay.test.register.ConsumerRegister">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="setUp" is-config="true" duration-ms="15934" started-at="2014-11-25T14:46:25Z" finished-at="2014-11-25T14:46:41Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="setUp" is-config="true" duration-ms="22478" started-at="2014-11-25T14:58:13Z" finished-at="2014-11-25T14:58:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testApplyNoValueOnPasswordAndConfirm()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="testApplyNoValueOnPasswordAndConfirm" duration-ms="6394" started-at="2014-11-25T14:46:41Z" finished-at="2014-11-25T14:46:48Z">
+        <test-method status="PASS" signature="testValid()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="testValid" duration-ms="60254" started-at="2014-11-25T14:58:35Z" finished-at="2014-11-25T14:59:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testApplyNoValueOnPasswordAndConfirm -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="tearDown" is-config="true" duration-ms="437" started-at="2014-11-25T14:46:48Z" finished-at="2014-11-25T14:46:48Z">
+        </test-method> <!-- testValid -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="tearDown" is-config="true" duration-ms="483" started-at="2014-11-25T14:59:35Z" finished-at="2014-11-25T14:59:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
