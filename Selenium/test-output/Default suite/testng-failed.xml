@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ehatidapi.test.login.WebLogin">
+      <class name="com.skosay.test.login.ConsumerLogin">
         <methods>
-          <include name="testValidLogin"/>
+          <include name="setUp"/>
+          <include name="testFindElements"/>
         </methods>
-      </class> <!-- com.ehatidapi.test.login.WebLogin -->
+      </class> <!-- com.skosay.test.login.ConsumerLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

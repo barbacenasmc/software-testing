@@ -7,8 +7,15 @@ import org.openqa.selenium.WebDriver;
 
 public class Miscellaneous {
 	public WebDriver driver;
+	public WebDriver newdriver;
 	public String browser;
 	public String baseURL;
+	
+/*	public String getCurrentURL(){
+       String currentURL;
+       currentURL = newdriver.getCurrentUrl();
+        return currentURL;
+}*/
 	
 	
 	public void setURL(String baseURL){
