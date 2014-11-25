@@ -39,5 +39,8 @@ local.properties
 # sbteclipse plugin
 .target
 
+# TestNG output
+Selenium/test-output
+
 # TeXlipse plugin
 .texlipse
