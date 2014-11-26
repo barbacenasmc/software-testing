@@ -44,3 +44,4 @@ Selenium/test-output
 
 # TeXlipse plugin
 .texlipse
+.classpath
