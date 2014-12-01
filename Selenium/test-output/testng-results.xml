@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
@@ -48,6 +49,29 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.skosay.test.login.ConsumerLogin -->
+=======
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="16477" started-at="2014-11-27T05:03:22Z" finished-at="2014-11-27T05:03:39Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="16477" started-at="2014-11-27T05:03:22Z" finished-at="2014-11-27T05:03:39Z">
+      <class name="com.skosay.test.register.ConsumerRegister">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="setUp" is-config="true" duration-ms="12514" started-at="2014-11-27T13:03:22Z" finished-at="2014-11-27T13:03:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testApplyNoValueOnPassword()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="testApplyNoValueOnPassword" duration-ms="3531" started-at="2014-11-27T13:03:35Z" finished-at="2014-11-27T13:03:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApplyNoValueOnPassword -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="tearDown" is-config="true" duration-ms="421" started-at="2014-11-27T13:03:38Z" finished-at="2014-11-27T13:03:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.skosay.test.register.ConsumerRegister -->
+>>>>>>> 358e38f8d4f92fff117c12f6851e57704c9119c5
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

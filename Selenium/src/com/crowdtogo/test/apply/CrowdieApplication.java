@@ -210,7 +210,7 @@ public class CrowdieApplication {
 	}
 	//@Test(priority = 14)
 	public void testApplyNoFname() throws Exception{
-		//User did not enter a value on the firstname field
+		//User did not enter a value on the first name field
 		initialize();
 		inputApply("sample@gmail.com", "jdelacruz000", "jdelacruz000","", "Dela Cruz", "01/01/1990", "09261234567");
 		if(misc1.driver.getTitle().equals("Part time jobs in Bentonville Ar")){
