@@ -39,6 +39,7 @@ public class ConsumerLogin  {
 	
 	@Test(priority = 0)
 	
+	//Successfully registered consumer logged in to his account
 	public void validLogin()throws Exception{
 		inputLogin("consumer1@consumer.com", "consumer1");
 	 
@@ -57,6 +58,8 @@ public class ConsumerLogin  {
 	}
 	
 	@Test(priority = 1)
+	
+	//User tried to login without confirming his account through the link in the email notifcation after registration
 	public void invalidLoginAccountNotConfirmed()throws Exception{
 		setUp();
 		inputLogin("testcase@gmail.com", "password");
@@ -67,15 +70,17 @@ public class ConsumerLogin  {
 	// wait for 5 seconds
 	Thread.sleep(5000);
 	
-	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/")) {
-		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
-	}else{
+	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
+	}else{
+		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}
 	}
  
 
 	@Test(priority = 2)
+	
+	//User logged in with incorrect email but correct password
 	public void invalidLoginIncorrectEmail()throws Exception{
 		inputLogin("testcase@gmail.com", "consumer1");
 	 
@@ -86,13 +91,15 @@ public class ConsumerLogin  {
 	Thread.sleep(5000);
 	
 	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
-		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
-	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
+	}else{
+		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}
 	}
 	
 	@Test(priority = 3)
+	
+	//User logged in with correct email but incorrect password
 	public void invalidLoginIncorrectPassword()throws Exception{
 		inputLogin("consumer1@consumer.com", "password");
 	 
@@ -103,13 +110,15 @@ public class ConsumerLogin  {
 	Thread.sleep(5000);
 	
 	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
-		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
-	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
+	}else{
+		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}
 	}
 	
 	@Test(priority = 4)
+	
+	//User logged in with both incorrect email and password
 	public void invalidLogin()throws Exception{
 		inputLogin("testcase@gmail.com", "password");
 	 
@@ -120,13 +129,15 @@ public class ConsumerLogin  {
 	Thread.sleep(5000);
 	
 	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
-		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
-	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
+	}else{
+		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}
 	}
 	
 	@Test(priority = 5)
+	
+	//User tried to login without input on email field but entered a correct value on password field
 	public void noInputEmail()throws Exception{
 		inputLogin("", "consumer1");
 	 
@@ -137,13 +148,15 @@ public class ConsumerLogin  {
 	Thread.sleep(5000);
 	
 	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
-		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
-	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
+	}else{
+		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}
 	}
 	
 	@Test(priority = 6)
+	
+	//User entered correct email but did not enter a value on password field
 	public void noInputPassword()throws Exception{
 		inputLogin("consumer1@consumer.com", "");
 	 
@@ -154,13 +167,15 @@ public class ConsumerLogin  {
 	Thread.sleep(5000);
 	
 	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
-		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
-	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
+	}else{
+		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}
 	}
 	
 	@Test(priority = 7)
+	
+	//User tried to login without input on any field
 	public void noInput()throws Exception{
 		inputLogin("", "");
 	 
@@ -171,9 +186,9 @@ public class ConsumerLogin  {
 	Thread.sleep(5000);
 	
 	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
-		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
-	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
+	}else{
+		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}
 	endTest();
 	}
