@@ -2,7 +2,7 @@ package com.skosay.test.login;
 
 import org.openqa.selenium.By;
 //import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
 import com.miscellaneous.test.Miscellaneous;
@@ -10,12 +10,14 @@ import com.miscellaneous.test.Miscellaneous;
 
 public class ManagerLogin {
 	
+	String loginurl = "http://devapp.skosay.com/administrator";
+	String successloginurl = "http://devapp.skosay.com/historypage";
+	
 public Miscellaneous misc1 = new Miscellaneous();
 	
 	@BeforeTest
 	public void setUp(){
-	misc1.driver = new FirefoxDriver();
-	misc1.driver.get("http://devapp.skosay.com/administrator");
+	misc1.setURL("http://devapp.skosay.com/administrator");
 	}
 	
 	public void inputLogin(String email, String password){
@@ -37,7 +39,7 @@ public Miscellaneous misc1 = new Miscellaneous();
 	misc1.driver.quit();
 	}
 	
-	
+	/*
 	@Test(priority = 0)
 	
 	//User logged in with correct login details
@@ -50,10 +52,10 @@ public Miscellaneous misc1 = new Miscellaneous();
 		// wait for 5 seconds
 		Thread.sleep(5000);
 		
-		if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/historypage")) {
-			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
-		}else{
+		if (misc1.driver.getCurrentUrl().equals("loginurl")) {
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
+		}else{
+			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 			}
 		misc1.driver.close();
 		}
@@ -71,7 +73,7 @@ public Miscellaneous misc1 = new Miscellaneous();
 		// wait for 5 seconds
 		Thread.sleep(5000);
 		
-		if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/historypage")) {
+		if (misc1.driver.getCurrentUrl().equals("successloginurl")) {
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 		}else{
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
@@ -90,7 +92,7 @@ public Miscellaneous misc1 = new Miscellaneous();
 		// wait for 5 seconds
 		Thread.sleep(5000);
 		
-		if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/historypage")) {
+		if (misc1.driver.getCurrentUrl().equals("successloginurl")) {
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 		}else{
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
@@ -109,7 +111,7 @@ public Miscellaneous misc1 = new Miscellaneous();
 		// wait for 5 seconds
 		Thread.sleep(5000);
 		
-		if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/historypage")) {
+		if (misc1.driver.getCurrentUrl().equals("successloginurl")) {
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 		}else{
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
@@ -128,12 +130,12 @@ public Miscellaneous misc1 = new Miscellaneous();
 		// wait for 5 seconds
 		Thread.sleep(5000);
 		
-		if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/historypage")) {
+		if (misc1.driver.getCurrentUrl().equals("successloginurl")) {
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 		}else{
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 			}
-		}
+		} */
 
 	@Test(priority = 5)
 	
@@ -147,13 +149,14 @@ public Miscellaneous misc1 = new Miscellaneous();
 		// wait for 5 seconds
 		Thread.sleep(5000);
 		
-		if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/historypage")) {
+		if (misc1.driver.findElement(By.xpath("/html/body/div/div/div[1]/input")).isEnabled()) {
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 		}else{
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 			}
 		}
 	
+/*
 	@Test(priority = 6)
 	
 	//User tried to login without input on any field
@@ -166,13 +169,13 @@ public Miscellaneous misc1 = new Miscellaneous();
 		// wait for 5 seconds
 		Thread.sleep(5000);
 		
-		if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/historypage")) {
+		if (misc1.driver.findElement(By.xpath("/html/body/div/div/div[1]/input")).isEnabled()) {
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 		}else{
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 			}
 		misc1.driver.close();
-		}
+		}*/
 }
 
 

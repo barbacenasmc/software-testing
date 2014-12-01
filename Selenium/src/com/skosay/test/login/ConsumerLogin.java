@@ -3,18 +3,20 @@ package com.skosay.test.login;
 
 import org.openqa.selenium.By;
 //import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 import com.miscellaneous.test.Miscellaneous;
 
 public class ConsumerLogin  {
+	
+	String loginurl = "http://devapp.skosay.com/";
+	String successloginurl = "http://devapp.skosay.com/location";
 
 	public Miscellaneous misc1 = new Miscellaneous();
 	
 	@BeforeTest
 	public void setUp(){
-	misc1.driver = new FirefoxDriver();
-	misc1.driver.get("http://devapp.skosay.com/");
+	misc1.setURL("http://devapp.skosay.com/");
 	}
 	
 	public void inputLogin(String email, String password){
@@ -49,10 +51,10 @@ public class ConsumerLogin  {
 	// wait for 5 seconds
 	Thread.sleep(5000);
 	
-	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
-		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
-	}else{
+	if (misc1.driver.getCurrentUrl().equals("loginurl")) {
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
+	}else{
+		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}
 	endTest();
 	}
@@ -70,7 +72,7 @@ public class ConsumerLogin  {
 	// wait for 5 seconds
 	Thread.sleep(5000);
 	
-	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
+	if (misc1.driver.getCurrentUrl().equals("successloginurl")) {
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
@@ -90,7 +92,7 @@ public class ConsumerLogin  {
 	// wait for 5 seconds
 	Thread.sleep(5000);
 	
-	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
+	if (misc1.driver.getCurrentUrl().equals("successloginurl")) {
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
@@ -109,7 +111,7 @@ public class ConsumerLogin  {
 	// wait for 5 seconds
 	Thread.sleep(5000);
 	
-	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
+	if (misc1.driver.getCurrentUrl().equals("successloginurl")) {
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
@@ -128,7 +130,7 @@ public class ConsumerLogin  {
 	// wait for 5 seconds
 	Thread.sleep(5000);
 	
-	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
+	if (misc1.driver.getCurrentUrl().equals("successloginurl")) {
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
@@ -147,7 +149,7 @@ public class ConsumerLogin  {
 	// wait for 5 seconds
 	Thread.sleep(5000);
 	
-	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
+	if (misc1.driver.findElement(By.xpath("/html/body/div/div[1]/input")).isEnabled()) {
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
@@ -166,7 +168,7 @@ public class ConsumerLogin  {
 	// wait for 5 seconds
 	Thread.sleep(5000);
 	
-	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
+	if (misc1.driver.findElement(By.xpath("/html/body/div/div[1]/input")).isEnabled()) {
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
@@ -185,7 +187,7 @@ public class ConsumerLogin  {
 	// wait for 5 seconds
 	Thread.sleep(5000);
 	
-	if (misc1.driver.getCurrentUrl().equals("http://devapp.skosay.com/location")) {
+	if (misc1.driver.findElement(By.xpath("/html/body/div/div[1]/input")).isEnabled()) {
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");

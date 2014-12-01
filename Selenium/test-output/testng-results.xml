@@ -1,77 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <testng-results skipped="0" failed="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="183610" started-at="2014-12-01T01:20:51Z" finished-at="2014-12-01T01:23:54Z">
+  <suite name="Default suite" duration-ms="108857" started-at="2014-12-01T06:28:03Z" finished-at="2014-12-01T06:29:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="183610" started-at="2014-12-01T01:20:51Z" finished-at="2014-12-01T01:23:54Z">
+    <test name="Default test" duration-ms="108857" started-at="2014-12-01T06:28:03Z" finished-at="2014-12-01T06:29:52Z">
       <class name="com.skosay.test.login.ConsumerLogin">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="setUp" is-config="true" duration-ms="66293" started-at="2014-12-01T09:20:51Z" finished-at="2014-12-01T09:21:57Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="setUp" is-config="true" duration-ms="28534" started-at="2014-12-01T14:28:03Z" finished-at="2014-12-01T14:28:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validLogin()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="validLogin" duration-ms="16663" started-at="2014-12-01T09:21:57Z" finished-at="2014-12-01T09:22:14Z">
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="validLogin" duration-ms="9662" started-at="2014-12-01T14:28:31Z" finished-at="2014-12-01T14:28:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
-        <test-method status="PASS" signature="invalidLoginAccountNotConfirmed()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="invalidLoginAccountNotConfirmed" duration-ms="59739" started-at="2014-12-01T09:22:14Z" finished-at="2014-12-01T09:23:14Z">
+        <test-method status="PASS" signature="invalidLoginAccountNotConfirmed()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="invalidLoginAccountNotConfirmed" duration-ms="33011" started-at="2014-12-01T14:28:41Z" finished-at="2014-12-01T14:29:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginAccountNotConfirmed -->
-        <test-method status="PASS" signature="invalidLoginIncorrectEmail()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="invalidLoginIncorrectEmail" duration-ms="6567" started-at="2014-12-01T09:23:14Z" finished-at="2014-12-01T09:23:20Z">
+        <test-method status="PASS" signature="invalidLoginIncorrectEmail()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="invalidLoginIncorrectEmail" duration-ms="6302" started-at="2014-12-01T14:29:14Z" finished-at="2014-12-01T14:29:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginIncorrectEmail -->
-        <test-method status="PASS" signature="invalidLoginIncorrectPassword()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="invalidLoginIncorrectPassword" duration-ms="7044" started-at="2014-12-01T09:23:20Z" finished-at="2014-12-01T09:23:27Z">
+        <test-method status="PASS" signature="invalidLoginIncorrectPassword()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="invalidLoginIncorrectPassword" duration-ms="6274" started-at="2014-12-01T14:29:20Z" finished-at="2014-12-01T14:29:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLoginIncorrectPassword -->
-        <test-method status="PASS" signature="invalidLogin()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="invalidLogin" duration-ms="6301" started-at="2014-12-01T09:23:27Z" finished-at="2014-12-01T09:23:33Z">
+        <test-method status="PASS" signature="invalidLogin()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="invalidLogin" duration-ms="6303" started-at="2014-12-01T14:29:26Z" finished-at="2014-12-01T14:29:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalidLogin -->
-        <test-method status="PASS" signature="noInputEmail()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="noInputEmail" duration-ms="6267" started-at="2014-12-01T09:23:33Z" finished-at="2014-12-01T09:23:40Z">
+        <test-method status="PASS" signature="noInputEmail()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="noInputEmail" duration-ms="5933" started-at="2014-12-01T14:29:33Z" finished-at="2014-12-01T14:29:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noInputEmail -->
-        <test-method status="PASS" signature="noInputPassword()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="noInputPassword" duration-ms="8228" started-at="2014-12-01T09:23:40Z" finished-at="2014-12-01T09:23:48Z">
+        <test-method status="PASS" signature="noInputPassword()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="noInputPassword" duration-ms="6188" started-at="2014-12-01T14:29:39Z" finished-at="2014-12-01T14:29:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noInputPassword -->
-        <test-method status="PASS" signature="noInput()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="noInput" duration-ms="6456" started-at="2014-12-01T09:23:48Z" finished-at="2014-12-01T09:23:54Z">
+        <test-method status="PASS" signature="noInput()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="noInput" duration-ms="6618" started-at="2014-12-01T14:29:45Z" finished-at="2014-12-01T14:29:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- noInput -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="tearDown" is-config="true" duration-ms="0" started-at="2014-12-01T09:23:54Z" finished-at="2014-12-01T09:23:54Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.skosay.test.login.ConsumerLogin@6a03af]" name="tearDown" is-config="true" duration-ms="0" started-at="2014-12-01T14:29:52Z" finished-at="2014-12-01T14:29:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.skosay.test.login.ConsumerLogin -->
-=======
-<testng-results skipped="0" failed="0" total="1" passed="1">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="16477" started-at="2014-11-27T05:03:22Z" finished-at="2014-11-27T05:03:39Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="16477" started-at="2014-11-27T05:03:22Z" finished-at="2014-11-27T05:03:39Z">
-      <class name="com.skosay.test.register.ConsumerRegister">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="setUp" is-config="true" duration-ms="12514" started-at="2014-11-27T13:03:22Z" finished-at="2014-11-27T13:03:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testApplyNoValueOnPassword()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="testApplyNoValueOnPassword" duration-ms="3531" started-at="2014-11-27T13:03:35Z" finished-at="2014-11-27T13:03:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testApplyNoValueOnPassword -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="tearDown" is-config="true" duration-ms="421" started-at="2014-11-27T13:03:38Z" finished-at="2014-11-27T13:03:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.skosay.test.register.ConsumerRegister -->
->>>>>>> 358e38f8d4f92fff117c12f6851e57704c9119c5
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

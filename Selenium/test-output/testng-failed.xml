@@ -3,12 +3,18 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.skosay.test.register.ConsumerRegister">
+      <class name="com.skosay.test.login.ManagerLogin">
         <methods>
-          <include name="testApplyNoValueOnPassword"/>
+          <include name="noInput"/>
+          <include name="noInputEmail"/>
+          <include name="validLogin"/>
+          <include name="invalidLoginIncorrectEmail"/>
+          <include name="noInputPassword"/>
+          <include name="invalidLogin"/>
+          <include name="invalidLoginIncorrectPassword"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.skosay.test.register.ConsumerRegister -->
+      </class> <!-- com.skosay.test.login.ManagerLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
