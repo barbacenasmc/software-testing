@@ -42,6 +42,7 @@ public class ManagerLogin {
 	
 	@Test(priority = 0)
 	
+	//User logged in with correct login details
 		public void validLogin()throws Exception{
 		inputLogin("manage1@manage.com", "manage1");
 		Thread.sleep(5000);
@@ -50,12 +51,14 @@ public class ManagerLogin {
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}else{
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
-			}
-		logout();
 		}
+		logout();
+	}
+	
 	
 	@Test(priority = 1)
 		
+	//User logged in with incorrect email but correct password
 		public void invalidLoginIncorrectEmail()throws Exception{
 			inputLogin("testcase@gmail.com", "manage1");
 		Thread.sleep(5000);
@@ -64,12 +67,13 @@ public class ManagerLogin {
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}else{
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
-			}
+		}
 		driver.navigate().refresh();
 		}
 
 	@Test(priority = 2)
 	
+	//User logged in with correct email but incorrect password
 		public void invalidLoginIncorrectPassword()throws Exception{
 			inputLogin("manage1@manage.com", "password");
 		Thread.sleep(5000);
@@ -78,12 +82,14 @@ public class ManagerLogin {
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}else{
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
-			}
-		driver.navigate().refresh();
 		}
+		driver.navigate().refresh();
+	}
 
+	
 	@Test(priority = 3)
 
+	//User logged in with both incorrect email and password
 		public void invalidLogin()throws Exception{
 			inputLogin("testcase@gmail.com", "password");
 		Thread.sleep(5000);
@@ -92,12 +98,13 @@ public class ManagerLogin {
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}else{
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
-			}
-		driver.navigate().refresh();
 		}
+		driver.navigate().refresh();
+	}
 	
 	@Test(priority = 4)
 		
+	//User tried to login without input on email field but entered a correct value on password field
 		public void noInputEmail()throws Exception{
 			inputLogin("", "manage1");
 		Thread.sleep(5000);
@@ -110,8 +117,10 @@ public class ManagerLogin {
 		driver.navigate().refresh();
 		}
 
+
 	@Test(priority = 5)
 	
+	//User entered correct email but did not enter a value on password field
 		public void noInputPassword()throws Exception{
 			inputLogin("manage1@manage.com", "");
 		Thread.sleep(5000);
@@ -124,12 +133,15 @@ public class ManagerLogin {
 		driver.navigate().refresh();
 		}
 	
+
 	@Test(priority = 6)
 	
+	//User tried to login without input on any field
 		public void noInput()throws Exception{
 			inputLogin("", "");
 		Thread.sleep(5000);
 		
+
 		if (driver.findElement(By.xpath("/html/body/div/div/div[1]/input")).isEnabled()) {
 			System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 		}else{
@@ -137,6 +149,7 @@ public class ManagerLogin {
 			}
 		quit();
 		}
+
 }
 
 

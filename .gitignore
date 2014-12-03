@@ -40,8 +40,8 @@ local.properties
 .target
 
 # TestNG output
-Selenium/test-output
+/Selenium/test-output/*
 
 # TeXlipse plugin
 .texlipse
-.classpath
+/Selenium/.classpath

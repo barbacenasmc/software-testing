@@ -1,25 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="169338" started-at="2014-12-02T09:51:33Z" finished-at="2014-12-02T09:54:22Z">
+  <suite name="Default suite" duration-ms="1145387" started-at="2014-12-03T02:39:01Z" finished-at="2014-12-03T02:58:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="169338" started-at="2014-12-02T09:51:33Z" finished-at="2014-12-02T09:54:22Z">
-      <class name="com.skosay.test.register.Register">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.skosay.test.register.Register@7907ec20]" name="setUp" is-config="true" duration-ms="21493" started-at="2014-12-02T17:51:33Z" finished-at="2014-12-02T17:51:55Z">
+    <test name="Default test" duration-ms="1145387" started-at="2014-12-03T02:39:01Z" finished-at="2014-12-03T02:58:06Z">
+      <class name="com.skosay.test.login.ManagerLogin">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.skosay.test.login.ManagerLogin@546a03af]" name="setUp" is-config="true" duration-ms="389155" started-at="2014-12-03T10:39:01Z" finished-at="2014-12-03T10:45:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testApplyInvalidEmails()[pri:0, instance:com.skosay.test.register.Register@7907ec20]" name="testApplyInvalidEmails" duration-ms="147427" started-at="2014-12-02T17:51:55Z" finished-at="2014-12-02T17:54:22Z">
+        <test-method status="PASS" signature="validLogin()[pri:0, instance:com.skosay.test.login.ManagerLogin@546a03af]" name="validLogin" duration-ms="33882" started-at="2014-12-03T10:45:30Z" finished-at="2014-12-03T10:46:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testApplyInvalidEmails -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.skosay.test.register.Register@7907ec20]" name="quit" is-config="true" duration-ms="401" started-at="2014-12-02T17:54:22Z" finished-at="2014-12-02T17:54:22Z">
+        </test-method> <!-- validLogin -->
+        <test-method status="PASS" signature="invalidLoginIncorrectEmail()[pri:0, instance:com.skosay.test.login.ManagerLogin@546a03af]" name="invalidLoginIncorrectEmail" duration-ms="250818" started-at="2014-12-03T10:46:04Z" finished-at="2014-12-03T10:50:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginIncorrectEmail -->
+        <test-method status="PASS" signature="invalidLoginIncorrectPassword()[pri:0, instance:com.skosay.test.login.ManagerLogin@546a03af]" name="invalidLoginIncorrectPassword" duration-ms="135667" started-at="2014-12-03T10:50:15Z" finished-at="2014-12-03T10:52:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginIncorrectPassword -->
+        <test-method status="PASS" signature="invalidLogin()[pri:0, instance:com.skosay.test.login.ManagerLogin@546a03af]" name="invalidLogin" duration-ms="134958" started-at="2014-12-03T10:52:30Z" finished-at="2014-12-03T10:54:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method status="PASS" signature="noInputEmail()[pri:0, instance:com.skosay.test.login.ManagerLogin@546a03af]" name="noInputEmail" duration-ms="129921" started-at="2014-12-03T10:54:45Z" finished-at="2014-12-03T10:56:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noInputEmail -->
+        <test-method status="PASS" signature="noInputPassword()[pri:0, instance:com.skosay.test.login.ManagerLogin@546a03af]" name="noInputPassword" duration-ms="65010" started-at="2014-12-03T10:56:55Z" finished-at="2014-12-03T10:58:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noInputPassword -->
+        <test-method status="PASS" signature="noInput()[pri:0, instance:com.skosay.test.login.ManagerLogin@546a03af]" name="noInput" duration-ms="5957" started-at="2014-12-03T10:58:00Z" finished-at="2014-12-03T10:58:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noInput -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.skosay.test.login.ManagerLogin@546a03af]" name="quit" is-config="true" duration-ms="0" started-at="2014-12-03T10:58:06Z" finished-at="2014-12-03T10:58:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- com.skosay.test.register.Register -->
+      </class> <!-- com.skosay.test.login.ManagerLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

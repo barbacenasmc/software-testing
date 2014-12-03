@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/Muriel/Desktop/Selenium/selenium-2.44.0/selenium-java-2.44.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Muriel/Desktop/Selenium/selenium-2.44.0/selenium-java-2.44.0-srcs.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Muriel/Desktop/Selenium/selenium-2.44.0/libs/apache-mime4j-0.6.jar"/>
@@ -41,6 +42,5 @@
 	<classpathentry kind="lib" path="C:/Users/Muriel/Desktop/Selenium/selenium-2.44.0/libs/xalan-2.7.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Muriel/Desktop/Selenium/selenium-2.44.0/libs/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Muriel/Desktop/Selenium/selenium-2.44.0/libs/xml-apis-1.4.01.jar"/>
-	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
