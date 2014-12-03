@@ -1,64 +1,61 @@
-
 package com.skosay.test.register;
-
+ 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
-import com.miscellaneous.test.Miscellaneous;
 
-public class ConsumerRegister  {
+import com.skosay.test.pageobject.RegisterPage;
+
+ 
+public class Register {
 	String loginurl = "http://devapp.skosay.com/";
 	String errorurl = "http://devapp.skosay.com/register#errorMsg";
-
-	public Miscellaneous misc1 = new Miscellaneous();
-	
-	@BeforeClass
+ 
+     private static WebDriver driver = null;
+ 
+	@BeforeTest
 	public void setUp(){
-	misc1.setURL("http://devapp.skosay.com/register");
-	misc1.driver.manage().window().maximize() ;
+     driver = new FirefoxDriver();
+     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+     driver.get("http://devapp.skosay.com/register");
+     }
+	
+	public void inputRegister(String name, String email, String password, String confirm){
+		RegisterPage.txt_Username(driver).clear();
+		RegisterPage.txt_Username(driver).sendKeys(name);
+		RegisterPage.txt_Email(driver).clear();
+		RegisterPage.txt_Email(driver).sendKeys(email);
+		RegisterPage.txt_Password(driver).clear();
+		RegisterPage.txt_Password(driver).sendKeys(password);
+		RegisterPage.txt_ConfirmPassword(driver).clear();
+		RegisterPage.txt_ConfirmPassword(driver).sendKeys(confirm);
+		RegisterPage.btn_LogIn(driver).click();
 	}
-	
-	@AfterClass
-	public void tearDown(){
-	misc1.driver.quit();
-	}
-	
-	
-	public void inputRegister(String name, String email, String password, String confirm ){
 
-		misc1. driver.findElement(By.name("nameField")).clear();
-		misc1.driver.findElement(By.id("nameField")).sendKeys(name);
-		misc1. driver.findElement(By.name("emailField")).clear();
-	    misc1.driver.findElement(By.id("emailField")).sendKeys(email);
-	    misc1. driver.findElement(By.name("passwordField")).clear();
-	    misc1.driver.findElement(By.id("passwordField")).sendKeys(password);
-	    misc1. driver.findElement(By.name("confirm-passwordField")).clear();
-	    misc1.driver.findElement(By.id("confirm-passwordField")).sendKeys(confirm);
-	    misc1.driver.findElement(By.xpath("/html/body/div/div[3]/input")).click();
-	    
-	    
+	   
+	@AfterTest
+	public void quit(){
+		driver.quit();
 	}
 	
-	public void endTest(){
-		misc1.endSession();
-	}
-	
-	
+	/*
 	@Test(priority = 0)
 	//User fills-out the form with complete and correct details
 	public void testValid()throws Exception{
 		inputRegister("Juan Dela Cruz", "juancruz@gmail.com", "jdelacruz000", "jdelacruz000");
-		misc1.driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
 		
 	Thread.sleep(5000);
 	
-	if (misc1.driver.getCurrentUrl().equals(loginurl)) {
+	if (driver.getCurrentUrl().equals(loginurl)) {
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 		} 
-	misc1.driver.navigate().refresh();
+	driver.navigate().refresh();
 	}
 	
 	
@@ -66,14 +63,14 @@ public class ConsumerRegister  {
 	//User fills-out the form with an email that was already in use
 	public void testApplyUsedEmail()throws Exception{
 		inputRegister("Juan Dela Cruz", "jdelacruz@gmail.com", "jdelacruz000", "jdelacruz000");
-		misc1.driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
 	
-	if(misc1.driver.findElement(By.xpath("/html/body/div/form[2]/div/label/i[2]")).isDisplayed()){
+	if(driver.findElement(By.xpath("/html/body/div/form[2]/div/label/i[2]")).isDisplayed()){
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName()+ " Passed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 		}
-	misc1.driver.navigate().refresh();
+	driver.navigate().refresh();
 	}
 	
 	
@@ -86,20 +83,20 @@ public class ConsumerRegister  {
 		
 		for(int i=0;i<validEmails.length;i++){
 			inputRegister("Juan Dela Cruz", validEmails[i], "jdelacruz000", "jdelacruz000");
-			misc1.driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
+			driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
 			
 			Thread.sleep(5000);
 			
-			if (misc1.driver.getCurrentUrl().equals(loginurl)){
+			if (driver.getCurrentUrl().equals(loginurl)){
 				System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName()+ ":"+ validEmails[i]+ " Passed!");
 			}else{
 				System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +":"+ validEmails[i] + " Failed!");
 			}
-			misc1.driver.navigate().refresh();
+			driver.navigate().refresh();
 		}	
 		
 	}
-	
+	*/
 
 	@Test(priority = 3)
 	//User fills-out the form and tried invalid email format
@@ -109,34 +106,34 @@ public class ConsumerRegister  {
 				"this is\"not\\allowed@example.com", "this\\ still\\\"not\\allowed@example.com","john..doe@example.com", "john.doe@example..com"};
 		
 		for(int i=0;i<invalidEmails.length;i++){
-			//initialize();
 			inputRegister("Juan Dela Cruz", invalidEmails[i], "jdelacruz000", "jdelacruz000");
-			misc1.driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
-			if(misc1.driver.findElement(By.xpath("/html/body/div/div[2]/div/center/h4/font")).isDisplayed()){
+			Thread.sleep(5000);
+			//driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
+			if(driver.findElement(By.xpath("/html/body/div/div[2]/div/center/h4/font")).isDisplayed()){
 				System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName()+ ":"+ invalidEmails[i]+ " Passed!");
 			}else{
 				System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +":"+ invalidEmails[i] + " Failed!");
 			}
-			misc1.driver.navigate().refresh();
+			driver.navigate().refresh();
 		}	
 	}
 	
 	
-	
+	/*
 	@Test(priority = 4)
 	//User fills-out the form with mismatched password and confirm password
 	public void testApplyMismatchedPassword()throws Exception{
 		inputRegister("Juan Dela Cruz", "jdelacruz1@gmail.com", "jdelacruz000", "jdelacruz012");
-		misc1.driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
 		
 	Thread.sleep(5000);
 	
-	if (misc1.driver.getCurrentUrl().equals(errorurl)){
+	if (driver.getCurrentUrl().equals(errorurl)){
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 		}
-	misc1.driver.navigate().refresh();
+	driver.navigate().refresh();
 	}
 	
 	
@@ -145,16 +142,16 @@ public class ConsumerRegister  {
 	//User fills-out the form with password that is less than 7 characters
 	public void testApplyShortPassword()throws Exception{
 		inputRegister("Juan Dela Cruz", "jdelacruz@gmail.com", "jdela", "jdela");
-		misc1.driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
 
 	Thread.sleep(5000);
 	
-	if (misc1.driver.getCurrentUrl().equals(errorurl)){
+	if (driver.getCurrentUrl().equals(errorurl)){
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 		}
-	misc1.driver.navigate().refresh();
+	driver.navigate().refresh();
 	}
 	
 	
@@ -163,14 +160,14 @@ public class ConsumerRegister  {
 	//User did not enter a value on password field but entered a value on confirm password field
 	public void testApplyNoValueOnPassword()throws Exception{
 		inputRegister("Juan Dela Cruz", "jdelacruz1@gmail.com", "", "jdelacruz000");
-		misc1.driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
 	
-	if(misc1.driver.findElement(By.xpath("/html/body/div/div[3]/input")).isEnabled()){
+	if(driver.findElement(By.xpath("/html/body/div/div[3]/input")).isEnabled()){
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}
-	misc1.driver.navigate().refresh();
+	driver.navigate().refresh();
 	}
 	
 	
@@ -179,14 +176,14 @@ public class ConsumerRegister  {
 	//User enters a value on password field but did not enter a value on confirm password field
 	public void testApplyNoValueOnConfirm()throws Exception{
 		inputRegister("Juan Dela Cruz", "jdelacruz1@gmail.com", "jdelacruz000", "");
-		misc1.driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
 	
-	if(misc1.driver.findElement(By.xpath("/html/body/div/div[3]/input")).isEnabled()){
+	if(driver.findElement(By.xpath("/html/body/div/div[3]/input")).isEnabled()){
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}
-	misc1.driver.navigate().refresh();
+	driver.navigate().refresh();
 	}
 	
 	
@@ -195,14 +192,14 @@ public class ConsumerRegister  {
 	//User did not enter values on password and confirm password field
 	public void testApplyNoValueOnPasswordAndConfirm()throws Exception{
 		inputRegister("Juan Dela Cruz", "jdelacruz1@gmail.com", "", "");
-		misc1.driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
 	
-	if(misc1.driver.findElement(By.xpath("/html/body/div/div[3]/input")).isEnabled()){
+	if(driver.findElement(By.xpath("/html/body/div/div[3]/input")).isEnabled()){
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 	}else{
 		System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Passed!");
 		}
-	misc1.driver.navigate().refresh();
+	driver.navigate().refresh();
 	}
-	
+	*/
 }

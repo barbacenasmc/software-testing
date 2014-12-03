@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16477" started-at="2014-11-27T05:03:22Z" finished-at="2014-11-27T05:03:39Z">
+  <suite name="Default suite" duration-ms="169338" started-at="2014-12-02T09:51:33Z" finished-at="2014-12-02T09:54:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16477" started-at="2014-11-27T05:03:22Z" finished-at="2014-11-27T05:03:39Z">
-      <class name="com.skosay.test.register.ConsumerRegister">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="setUp" is-config="true" duration-ms="12514" started-at="2014-11-27T13:03:22Z" finished-at="2014-11-27T13:03:35Z">
+    <test name="Default test" duration-ms="169338" started-at="2014-12-02T09:51:33Z" finished-at="2014-12-02T09:54:22Z">
+      <class name="com.skosay.test.register.Register">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.skosay.test.register.Register@7907ec20]" name="setUp" is-config="true" duration-ms="21493" started-at="2014-12-02T17:51:33Z" finished-at="2014-12-02T17:51:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testApplyNoValueOnPassword()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="testApplyNoValueOnPassword" duration-ms="3531" started-at="2014-11-27T13:03:35Z" finished-at="2014-11-27T13:03:38Z">
+        <test-method status="PASS" signature="testApplyInvalidEmails()[pri:0, instance:com.skosay.test.register.Register@7907ec20]" name="testApplyInvalidEmails" duration-ms="147427" started-at="2014-12-02T17:51:55Z" finished-at="2014-12-02T17:54:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testApplyNoValueOnPassword -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.skosay.test.register.ConsumerRegister@6ea6d14e]" name="tearDown" is-config="true" duration-ms="421" started-at="2014-11-27T13:03:38Z" finished-at="2014-11-27T13:03:39Z">
+        </test-method> <!-- testApplyInvalidEmails -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.skosay.test.register.Register@7907ec20]" name="quit" is-config="true" duration-ms="401" started-at="2014-12-02T17:54:22Z" finished-at="2014-12-02T17:54:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.skosay.test.register.ConsumerRegister -->
+        </test-method> <!-- quit -->
+      </class> <!-- com.skosay.test.register.Register -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
