@@ -41,11 +41,11 @@ public class ConsumerRegister {
 		driver.quit();
 	}
 	
-	
+	/*
 	@Test(priority = 0)
 	//User fills-out the form with complete and correct details
 	public void testValid()throws Exception{
-		inputRegister("Juan Dela Cruz", "juancruz@gmail.com", "jdelacruz000", "jdelacruz000");
+		inputRegister("Juan Dela Cruz", "jcruz@gmail.com", "jdelacruz000", "jdelacruz000");
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.MINUTES);
 		
 	Thread.sleep(5000);
@@ -78,7 +78,7 @@ public class ConsumerRegister {
 	//User fills-out the form and tried other valid email format
 	public void testApplyOtherValidEmail()throws Exception{
 		
-		String [] validEmails = {"nicensimple@example.com", "very.commn@example.com", "a.little.lengthy.but.fine@dept.example.com", 
+		String [] validEmails = {"nicensimpl@example.com", "very.commn@example.com", "a.little.lengthy.but.fine@dept.example.com", 
 				"disposable.style.email.with+symbol@example.com", "other.email-with-dash@example.com", "user@localserver.com", "another_acceptable_example@server.com"};
 		
 		for(int i=0;i<validEmails.length;i++){
@@ -186,7 +186,7 @@ public class ConsumerRegister {
 	driver.navigate().refresh();
 	}
 	
-	
+	*/
 	
 	@Test(priority = 8)
 	//User did not enter values on password and confirm password field
