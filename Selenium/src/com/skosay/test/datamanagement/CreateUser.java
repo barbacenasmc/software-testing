@@ -41,7 +41,7 @@ public class CreateUser{
 		driver.quit();
 	}
 
-
+/*
 	@Test(priority = 1)
 	//User fills-out the form with correct details
 	
@@ -142,7 +142,7 @@ public class CreateUser{
 			driver.navigate().refresh();
 		}
 	}
-	
+	*/
 	@Test(priority = 7)
 	//User fills-out the form and tried invalid email address formats
 	public void testApplyInvalidEmail()throws Exception{

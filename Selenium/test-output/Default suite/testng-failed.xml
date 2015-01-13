@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.skosay.test.datamanagement.UpdateUser">
+      <class name="com.skosay.test.datamanagement.CreateUser">
         <methods>
-          <include name="testApplyEditCancel"/>
+          <include name="testApplyInvalidEmail"/>
           <include name="quit"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.skosay.test.datamanagement.UpdateUser -->
+      </class> <!-- com.skosay.test.datamanagement.CreateUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
