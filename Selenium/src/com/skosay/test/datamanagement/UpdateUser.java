@@ -45,6 +45,11 @@ public class UpdateUser{
 		UserPage.cbo_EditType(driver).sendKeys(type);
 		UserPage.btn_EditCancel(driver).click();
 	}
+	
+	public void editUserManagement(String group){
+		UserPage.tab_UserManagement(driver).click();
+		UserPage.btn_EditUserGroup(driver).click();
+	}
 
 	   
 	@AfterTest
@@ -52,7 +57,7 @@ public class UpdateUser{
 		driver.quit();
 	}
 
-/*
+
 	@Test(priority = 0)
 	//User edit an existing user account with correct details
 
@@ -74,7 +79,7 @@ public class UpdateUser{
 		}
 	driver.navigate().refresh();
 }
-	
+/*	
 	@Test(priority = 1)
 	//User edit an existing user account with correct details and changed the account type
 	
@@ -140,7 +145,7 @@ public class UpdateUser{
 	driver.navigate().refresh();
 }
 	*/
-	@Test(priority = 5)
+/*	@Test(priority = 5)
 	//User edit an account and hit cancel after
 	
 	public void testApplyEditCancel()throws Exception{
@@ -155,7 +160,7 @@ public class UpdateUser{
 		}
 	driver.navigate().refresh();
 }
-	/*
+	
 	@Test(priority = 6)
 	//User edit an account and tried to input a very long character in the name field
 	

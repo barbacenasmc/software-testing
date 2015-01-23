@@ -61,4 +61,14 @@ public class UserPage {
         return element;
         }
     
+    public static WebElement tab_UserManagement(WebDriver driver){
+    	element = driver.findElement(By.xpath("/html/body/div[1]/ul/li[2]/a"));
+    	return element;
+    }
+    
+    public static WebElement btn_EditUserGroup(WebDriver driver){
+    	element = driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/table/tbody[2]/tr[2]/td[5]/div[1]/a/span"));
+    	return element;
+    }
+    
 }

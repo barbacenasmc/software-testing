@@ -157,12 +157,12 @@ public class CreateUser{
 									" leadingspace@email.com"};
 		
 		for(int i=0;i<invalidEmails.length;i++){
-			registerUser("Juan Dela Cruz", invalidEmails[i], "jdelacruz000", "Consumer");
+			registerUser("Invalid", invalidEmails[i], "jdelacruz000", "Consumer");
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			
 			Thread.sleep(5000);
 			
-			if(driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/label")).isDisplayed()){
+			if(driver.findElement(By.id("errorMsg")).isDisplayed()){
 				System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName()+ ":"+ invalidEmails[i]+ " Passed!");
 			}else{
 				System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() +":"+ invalidEmails[i] + " Failed!");
@@ -170,7 +170,7 @@ public class CreateUser{
 			driver.navigate().refresh();
 		}
 	}
-	
+	/*
 	@Test(priority = 8)
 	//User tried to create account with used email address
 	public void testApplyUsedEmail()throws Exception{
@@ -363,5 +363,5 @@ public class CreateUser{
 		}
 	driver.navigate().refresh();
 	}
-
+*/
 }
