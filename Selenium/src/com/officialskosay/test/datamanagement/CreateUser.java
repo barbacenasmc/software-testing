@@ -1,13 +1,13 @@
 package com.officialskosay.test.datamanagement;
 
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.By;
+//import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 import com.officialskosay.test.pageobject.UsersPage;
-import com.officialskosay.test.pageobject.StoreGroupPage;
-import com.officialskosay.test.pageobject.StoresPage;
+//import com.officialskosay.test.pageobject.StoreGroupPage;
+//import com.officialskosay.test.pageobject.StoresPage;
 	 
 	public class CreateUser{
 		String empty = "";
@@ -37,7 +37,7 @@ import com.officialskosay.test.pageobject.StoresPage;
 			UsersPage.btn_CreateNewAccount(driver).click();
 		}
 		
-		public void registerUserWithGroup(String name, String email, String password, String type, String group){
+	/*	public void registerUserWithGroup(String name, String email, String password, String type, String group){
 			UsersPage.txt_AddUserName(driver).clear();
 			UsersPage.txt_AddUserName(driver).sendKeys(name);
 			UsersPage.txt_AddUserEmail(driver).clear();
@@ -212,7 +212,7 @@ import com.officialskosay.test.pageobject.StoresPage;
 				System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName() + " Failed!");
 			}
 		}
-		/*
+		
 		//@Test(priority = 9)
 		//User tried to delete an existing Store account
 		public void testApplydeleteStore()throws Exception{

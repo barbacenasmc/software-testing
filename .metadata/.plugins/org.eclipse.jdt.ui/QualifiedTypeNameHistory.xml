@@ -3,4 +3,5 @@
 <fullyQualifiedTypeName name="com.crowdtogo.test.apply.CrowdieApplication"/>
 <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.NoSuchElementException"/>
+<fullyQualifiedTypeName name="com.dtm.test.pageobject.ManageData"/>
 </qualifiedTypeNameHistroy>
